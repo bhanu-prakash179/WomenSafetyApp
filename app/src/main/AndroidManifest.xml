@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.womensafetyapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/img"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.womensafetyapp.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.womensafetyapp.Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="com.example.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensafetyapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.womensafetyapp.Display"
+            android:label="@string/title_activity_display"
+            android:parentActivityName="com.example.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensafetyapp.MainActivity" />
+        </activity>
+        <service android:name="com.example.womensafetyapp.BgService" />
+        <activity
+            android:name="com.example.womensafetyapp.Instructions"
+            android:label="@string/title_activity_instructions"
+            android:parentActivityName="com.example.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensafetyapp.MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.example.womensafetyapp.Verify"
+            android:label="@string/title_activity_verify"
+            android:parentActivityName="com.example.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.womensafetyapp.MainActivity" />
+        </activity>
+    </application>
+</manifest>
